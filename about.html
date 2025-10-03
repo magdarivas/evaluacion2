@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magdalena Rivas - Diseñadora Integral</title>
     <link href="style.css" rel="stylesheet"/>
+
 </head>
 <body>
     <div class="container">
@@ -16,47 +17,50 @@
 
         <!-- Navigation -->
         <nav class="nav">
-            <a href="index.html">Portafolio</a> <!--aca-->
+            <a href="index.html">Portafolio</a> 
             <a href="about.html" class="active">Sobre mí</a>
 
         </nav>
 
-        <!-- Gallery -->
-        <!--
-        <section class="gallery">
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="tallercuatro.jpg" width="400" height="400">
-                    <div class="gallery-overlay">
-                        <h3>Bolso Upcycling Mad Smile</h3>
-                        <p>6.3</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="textilesandinos.jpg" width="400" height="400">
-                    <div class="gallery-overlay">
-                        <h3>Cartera tejida a telar</h3>
-                        <p>6.8</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="tallersiete.jpg" width="400" height="400">
-                    <div class="gallery-overlay">
-                        <h3>Envolvente zero-waste</h3>
-                        <p>6.5</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="brochesbordados.jpg" width="400" height="400">
-                    <div class="gallery-overlay">
-                        <h3>Broches bordados</h3>
-                        <p>S.N</p>
-                    </div>
-                </div>             
-              
-            </div>
-            -->
+
         </section>
+        <canvas id="alla"></canvas>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+         <script>
+            new Chart("alla", {
+                type: "line",
+                data: {
+                    labels: ["2017", "2018", "2019", "2020","2021","2022","2023","2024","2025"],
+                    datasets: [
+                        {
+                            label: "Cantidad de técnicas de bordado dominadas",
+                            data: [1,2,2,3,3,4,7,9,10],
+                            borderWidth: 3,
+                            borderColor:"green"
+                        },
+                        {
+                            label: "Ferias de ocio visitadas",
+                            data: [2,3,1,0,2,1,1,2,2],
+                            borderWidth: 1,
+                            borderColor:"purple"
+                        },
+                        {
+                            label: "Cursos extracurriculares realizados",
+                            data: [0,1,0,0,0,1,1,2,1],
+                            borderWidth: 2,
+                            borderColor:"orange"
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+        </script>
 
         <!-- Footer -->
         <footer class="footer">
